@@ -1,17 +1,21 @@
 {
-  "name": "nuxt-app",
+  "name": "my-nuxt-layer",
   "type": "module",
-  "private": true,
+  "version": "0.0.1",
+  "main": "./nuxt.config.ts",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "dev": "nuxi dev .playground",
+    "dev:prepare": "nuxt prepare .playground",
+    "build": "nuxt build .playground",
+    "generate": "nuxt generate .playground",
+    "preview": "nuxt preview .playground",
+    "lint": "eslint ."
   },
-  "dependencies": {
+  "devDependencies": {
+    "@nuxt/eslint": "latest",
+    "eslint": "^9.34.0",
     "nuxt": "^4.0.3",
-    "vue": "^3.5.20",
-    "vue-router": "^4.5.1"
+    "typescript": "^5.9.2",
+    "vue": "latest"
   }
 }
