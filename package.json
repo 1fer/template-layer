@@ -1,21 +1,67 @@
 {
-  "name": "my-nuxt-layer",
+  "name": "@1fer/template-layer",
   "type": "module",
   "version": "0.0.1",
   "main": "./nuxt.config.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1fer/template-layer.git"
+  },
+  "homepage": "https://github.com/1fer/template-layer",
+  "bugs": {
+    "url": "https://github.com/1fer/template-layer/issues"
+  },
+  "exports": {
+    ".": {
+      "import": "./nuxt.config.ts"
+    }
+  },
+  "files": [
+    "nuxt.config.ts",
+    "app/",
+    "components/",
+    "plugins/",
+    "composables/",
+    "stores/",
+    "middleware/",
+    "server/",
+    "assets/",
+    "i18n/",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "nuxt": "^4.0.0"
+  },
+  "devDependencies": {
+    "@1fer/tooling": "^0.1.11",
+    "@nuxt/eslint": "^1.9.0",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^4.2.0",
+    "nuxt": "^4.0.3",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2"
+  },
   "scripts": {
     "dev": "nuxi dev .playground",
     "dev:prepare": "nuxt prepare .playground",
     "build": "nuxt build .playground",
     "generate": "nuxt generate .playground",
     "preview": "nuxt preview .playground",
-    "lint": "eslint ."
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
-  "devDependencies": {
-    "@nuxt/eslint": "latest",
-    "eslint": "^9.34.0",
-    "nuxt": "^4.0.3",
-    "typescript": "^5.9.2",
-    "vue": "latest"
-  }
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "engines": {
+    "node": ">=20.12.0"
+  },
+  "prettier": "@1fer/tooling/prettier"
 }

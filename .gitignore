@@ -22,3 +22,6 @@ dist
 
 # JetBrains/WebStorm
 .idea/
+
+# Git
+.npmrc
